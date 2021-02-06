@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using Model;
 
 namespace ReportesBasicosMunicipios
 {
@@ -121,13 +122,16 @@ namespace ReportesBasicosMunicipios
             {
                 munInfo.Text = "Código de Municipio no encontrado";
             }
+            sr.Close();
         }
 
         public List<Municipio> MunicipiosList()
         {
             var sr = new StreamReader(new FileStream(filePath, FileMode.Open));
             var csv = new CsvReader(sr, CultureInfo.CurrentCulture);
-            return csv.GetRecords<Municipio>().ToList();
+            List<Municipio> list = csv.GetRecords<Municipio>().ToList();
+            sr.Close();
+            return list;
         }
     }
 }

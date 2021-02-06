@@ -132,7 +132,7 @@ namespace ReportesBasicosMunicipios
             // 
             // municipioBindingSource
             // 
-            this.municipioBindingSource.DataSource = typeof(ReportesBasicosMunicipios.Municipio);
+            this.municipioBindingSource.DataSource = typeof(Model.Municipio);
             // 
             // btnRead
             // 
@@ -207,7 +207,7 @@ namespace ReportesBasicosMunicipios
             // 
             // municipioBindingSource1
             // 
-            this.municipioBindingSource1.DataSource = typeof(ReportesBasicosMunicipios.Municipio);
+            this.municipioBindingSource1.DataSource = typeof(Model.Municipio);
             // 
             // pieChart1
             // 
