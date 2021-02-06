@@ -18,8 +18,6 @@ namespace ReportesBasicosMunicipios
     {
         private List<Municipio> municipios;
         private string filePath;
-        //private CsvReader csv;
-        //private IEnumerable<Municipio> records;
 
         public Form1()
         {
@@ -46,64 +44,10 @@ namespace ReportesBasicosMunicipios
                     
                     var csv = new CsvReader(sr, CultureInfo.CurrentCulture);
 
-                    //var users = csv.GetRecords<Municipio>();
-
-                    //foreach (var user in users)
-                    //{
-                    //    Console.WriteLine(user);
-                    //}
-
-                    //record Municipio(string CodidoDept, string CodidoMun, string NombreDept, string NombreMun, string Tipo);
-                    //List<Municipio> m = new List<Municipio>();
-                    //try
-                    //{
-                    //    while (csv.Read())
-                    //    {
-                    //        var record = new Municipio();
-
-                    //        record.CodigoDept = csv.GetField<string>("CodigoDept");
-                    //        record.CodigoMun = csv.GetField<string>("CodigoMun");
-                    //        record.NombreDept = csv.GetField<string>("NombreDept");
-                    //        record.NombreMun = csv.GetField<string>("NombreMun");
-                    //        record.Tipo = csv.GetField<string>("Tipo");
-
-
-                    //        Console.WriteLine(record.CodigoDept);
-                    //        municipios.Add(record);
-                    //    }
-                    //}
-                    //catch (CsvHelper.ReaderException)
-                    //{
-
-                    //}
-                    //municipioBindingSource.DataSource = m;
-
-                    //Console.WriteLine(municipios.Count());
-
                     IEnumerable<Municipio> records = csv.GetRecords<Municipio>();
 
                     municipioBindingSource.DataSource = records;
 
-                    //Municipio mun;
-
-                    //foreach (IEnumerable<Municipio> m in csv.GetRecords<Municipio>())
-                    //{
-
-                    //}
-
-                    //municipios = csv.GetRecords<Municipio>().ToList<Municipio>();
-                    //foreach (var item in records)
-                    //{
-                    //    municipios.Add(item);
-                    //}
-
-
-                    //Console.WriteLine(municipios.Count);
-
-                    //for (int i = 1; i < 5; i++)
-                    //{
-                    //    Console.WriteLine(municipios[i]);
-                    //}
                     sr.Close();
                 }
             }
@@ -119,8 +63,7 @@ namespace ReportesBasicosMunicipios
             IEnumerable<Municipio> records = csv.GetRecords<Municipio>();
 
             Municipio found = null;
-            
-            //Console.WriteLine(records.Count());
+
             foreach (Municipio mun in records)
             {
                 if (((Municipio)mun).CodigoMun.Equals(codMunicipio))
@@ -129,15 +72,6 @@ namespace ReportesBasicosMunicipios
                     break;
                 }
             }
-            //Municipio found = null;
-            //foreach (Municipio m in municipios)
-            //{
-            //    if (m.CodigoMun.Equals(codMunicipio))
-            //    {
-            //        found = m;
-            //        break;
-            //    }
-            //}
 
             if (found != null)
             {
@@ -151,11 +85,6 @@ namespace ReportesBasicosMunicipios
             {
                 munInfo.Text = "Código de Municipio no encontrado";
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
