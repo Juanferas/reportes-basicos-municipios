@@ -71,3 +71,4 @@ C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\
 C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\obj\Debug\ReportesBasicosMunicipios.Form2.resources
+C:\Users\Miguel Sarasti\source\repos\Juanferas\reportes-basicos-municipios\ReportesBasicosMunicipios\obj\Debug\ReportesBasicosMunicipios.Form2.resources

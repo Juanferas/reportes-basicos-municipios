@@ -20,6 +20,7 @@ namespace ReportesBasicosMunicipios
     {
         private List<Municipio> municipios;
         private string filePath;
+        private Form2 pieChartWindow;
 
         public Form1()
         {
@@ -93,6 +94,7 @@ namespace ReportesBasicosMunicipios
 
             btnSearch.Enabled = true;
             btnChart.Enabled = true;
+            btnRead.Enabled = false;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -141,10 +143,9 @@ namespace ReportesBasicosMunicipios
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2(); //this is the change, code for redirect 
-            f2.LoadChart(MunicipiosList());
-            f2.ShowDialog();
-            
+            pieChartWindow = new Form2(); //this is the change, code for redirect 
+            pieChartWindow.LoadChart(MunicipiosList());
+            pieChartWindow.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
