@@ -49,14 +49,15 @@ namespace ReportesBasicosMunicipios
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.munInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.municipioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pieChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnChart = new System.Windows.Forms.Button();
+            this.municipioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieChart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -65,10 +66,10 @@ namespace ReportesBasicosMunicipios
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 9);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(12, 11);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 20);
+            this.textBox1.Size = new System.Drawing.Size(340, 22);
             this.textBox1.TabIndex = 1;
             // 
             // dataGridView1
@@ -82,12 +83,12 @@ namespace ReportesBasicosMunicipios
             this.nombreMunDataGridViewTextBoxColumn,
             this.tipoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.municipioBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 41);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(453, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(608, 628);
             this.dataGridView1.TabIndex = 2;
             // 
             // codigoDeptDataGridViewTextBoxColumn
@@ -136,10 +137,10 @@ namespace ReportesBasicosMunicipios
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(268, 8);
-            this.btnRead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRead.Location = new System.Drawing.Point(357, 10);
+            this.btnRead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(56, 19);
+            this.btnRead.Size = new System.Drawing.Size(75, 23);
             this.btnRead.TabIndex = 3;
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
@@ -147,18 +148,19 @@ namespace ReportesBasicosMunicipios
             // 
             // codMun
             // 
-            this.codMun.Location = new System.Drawing.Point(555, 9);
-            this.codMun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.codMun.Location = new System.Drawing.Point(754, 11);
+            this.codMun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.codMun.Name = "codMun";
-            this.codMun.Size = new System.Drawing.Size(90, 20);
+            this.codMun.Size = new System.Drawing.Size(119, 22);
             this.codMun.TabIndex = 4;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(649, 8);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Enabled = false;
+            this.btnSearch.Location = new System.Drawing.Point(890, 11);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(56, 19);
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -167,21 +169,21 @@ namespace ReportesBasicosMunicipios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(346, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(476, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 13);
+            this.label1.Size = new System.Drawing.Size(272, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "|      Filtrar por Código DANE del Municipio";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.munInfo);
-            this.groupBox1.Location = new System.Drawing.Point(11, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(15, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(202, 98);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(561, 121);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Municipio";
@@ -189,25 +191,20 @@ namespace ReportesBasicosMunicipios
             // munInfo
             // 
             this.munInfo.AutoSize = true;
-            this.munInfo.Location = new System.Drawing.Point(5, 18);
-            this.munInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.munInfo.Location = new System.Drawing.Point(7, 22);
             this.munInfo.Name = "munInfo";
-            this.munInfo.Size = new System.Drawing.Size(0, 13);
+            this.munInfo.Size = new System.Drawing.Size(0, 17);
             this.munInfo.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(478, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(637, 50);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 121);
+            this.panel1.Size = new System.Drawing.Size(594, 148);
             this.panel1.TabIndex = 9;
-            // 
-            // municipioBindingSource1
-            // 
-            this.municipioBindingSource1.DataSource = typeof(Model.Municipio);
             // 
             // pieChart1
             // 
@@ -215,22 +212,39 @@ namespace ReportesBasicosMunicipios
             this.pieChart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.pieChart1.Legends.Add(legend1);
-            this.pieChart1.Location = new System.Drawing.Point(478, 167);
+            this.pieChart1.Location = new System.Drawing.Point(637, 206);
+            this.pieChart1.Margin = new System.Windows.Forms.Padding(4);
             this.pieChart1.Name = "pieChart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.pieChart1.Series.Add(series1);
-            this.pieChart1.Size = new System.Drawing.Size(227, 189);
+            this.pieChart1.Size = new System.Drawing.Size(594, 470);
             this.pieChart1.TabIndex = 10;
             this.pieChart1.Text = "chart1";
             // 
+            // btnChart
+            // 
+            this.btnChart.Enabled = false;
+            this.btnChart.Location = new System.Drawing.Point(1011, 12);
+            this.btnChart.Name = "btnChart";
+            this.btnChart.Size = new System.Drawing.Size(221, 23);
+            this.btnChart.TabIndex = 11;
+            this.btnChart.Text = "Generate chart on new window";
+            this.btnChart.UseVisualStyleBackColor = true;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
+            // 
+            // municipioBindingSource1
+            // 
+            this.municipioBindingSource1.DataSource = typeof(Model.Municipio);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 366);
+            this.ClientSize = new System.Drawing.Size(1244, 689);
+            this.Controls.Add(this.btnChart);
             this.Controls.Add(this.pieChart1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -239,7 +253,7 @@ namespace ReportesBasicosMunicipios
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Reportes Municipales";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -247,8 +261,8 @@ namespace ReportesBasicosMunicipios
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieChart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +287,7 @@ namespace ReportesBasicosMunicipios
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label munInfo;
         private System.Windows.Forms.DataVisualization.Charting.Chart pieChart1;
+        private System.Windows.Forms.Button btnChart;
     }
 }
 

@@ -61,3 +61,13 @@ C:\Users\Miguel Sarasti\source\repos\Juanferas\reportes-basicos-municipios\Repor
 C:\Users\Miguel Sarasti\source\repos\Juanferas\reportes-basicos-municipios\ReportesBasicosMunicipios\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Miguel Sarasti\source\repos\Juanferas\reportes-basicos-municipios\ReportesBasicosMunicipios\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Miguel Sarasti\source\repos\Juanferas\reportes-basicos-municipios\ReportesBasicosMunicipios\obj\Debug\ReportesBasicosMunicipios.csproj.CopyComplete
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.dll
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.pdb
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.xml
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\juanf\source\repos\ReportesBasicosMunicipios\ReportesBasicosMunicipios\obj\Debug\ReportesBasicosMunicipios.Form2.resources

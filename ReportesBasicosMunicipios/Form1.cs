@@ -57,6 +57,8 @@ namespace ReportesBasicosMunicipios
 
                     sr.Close();
 
+                    
+
                     municipios = MunicipiosList();
                     int count = 0;
                     int indexChart = 0;
@@ -88,6 +90,9 @@ namespace ReportesBasicosMunicipios
                     
                 }
             }
+
+            btnSearch.Enabled = true;
+            btnChart.Enabled = true;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -132,6 +137,19 @@ namespace ReportesBasicosMunicipios
             List<Municipio> list = csv.GetRecords<Municipio>().ToList();
             sr.Close();
             return list;
+        }
+
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2(); //this is the change, code for redirect 
+            f2.LoadChart(MunicipiosList());
+            f2.ShowDialog();
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Process.Start("..\\..\\..\\data\\meme.jpeg");
         }
     }
 }
