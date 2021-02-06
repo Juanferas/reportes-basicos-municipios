@@ -16,44 +16,12 @@ namespace ReportesBasicosMunicipios
 {
     public partial class Form1 : Form
     {
+        private List<Municipio> municipios;
+
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //openInExplorer("");
-            //string path = @"C:\Users\";
-            //string args = string.Format("/e, /select, \"{0}\"", path);
-
-            //ProcessStartInfo info = new ProcessStartInfo();
-            //info.FileName = "explorer";
-            //info.Arguments = args;
-            //Process.Start(info);
-            
-
-            //OpenFileDialog openFileDialog1 = new OpenFileDialog
-            //{
-            //    InitialDirectory = @"D:\",
-            //    Title = "Browse Text Files",
-
-            //    CheckFileExists = true,
-            //    CheckPathExists = true,
-
-            //    DefaultExt = "txt",
-            //    Filter = "csv files (*.csv)|*.csv",
-            //    FilterIndex = 2,
-            //    RestoreDirectory = true,
-
-            //    ReadOnlyChecked = true,
-            //    ShowReadOnly = true
-            //};
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = openFileDialog1.FileName;
-            }
+            municipios = new List<Municipio>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -88,25 +56,79 @@ namespace ReportesBasicosMunicipios
                     //    {
                     //        var record = new Municipio();
 
-                    //        record.CodigoDept = csv.GetField<string>("Código Departamento");
-                    //        record.CodigoMun = csv.GetField<string>("Código Municipio");
-                    //        record.NombreDept = csv.GetField<string>("Nombre Departamento");
-                    //        record.NombreMun = csv.GetField<string>("Nombre Municipio");
-                    //        record.Tipo = csv.GetField<string>("Tipo: Municipio / Isla / Área no municipalizada");
+                    //        record.CodigoDept = csv.GetField<string>("CodigoDept");
+                    //        record.CodigoMun = csv.GetField<string>("CodigoMun");
+                    //        record.NombreDept = csv.GetField<string>("NombreDept");
+                    //        record.NombreMun = csv.GetField<string>("NombreMun");
+                    //        record.Tipo = csv.GetField<string>("Tipo");
+
 
                     //        Console.WriteLine(record.CodigoDept);
-                    //        m.Add(record);
+                    //        municipios.Add(record);
                     //    }
                     //}
                     //catch (CsvHelper.ReaderException)
                     //{
-                    //    Console.WriteLine("F");
+                        
                     //}
                     //municipioBindingSource.DataSource = m;
 
-                    municipioBindingSource.DataSource = csv.GetRecords<Municipio>();
+                    Console.WriteLine(municipios.Count());
+
+                    IEnumerable<Municipio> records = csv.GetRecords<Municipio>();
+
+                    municipioBindingSource.DataSource = records;
+
+                    //Municipio mun;
+
+                    //foreach (IEnumerable<Municipio> m in csv.GetRecords<Municipio>())
+                    //{
+
+                    //}
+
+                    //municipios = csv.GetRecords<Municipio>().ToList<Municipio>();
+                    //foreach (var item in records)
+                    //{
+                    //    municipios.Add(item);
+                    //}
+
+
+                    Console.WriteLine(municipios.Count);
+
+                    //for (int i = 1; i < 5; i++)
+                    //{
+                    //    Console.WriteLine(municipios[i]);
+                    //}
                 }
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string codMunicipio = codMun.Text;
+            Municipio found = null;
+            foreach (Municipio m in municipios)
+            {
+                if (m.CodigoMun.Equals(codMunicipio))
+                {
+                    found = m;
+                    break;
+                }
+            }
+
+            if (found != null)
+            {
+                munInfo.Text = "Código Departamento: " + found.CodigoDept +
+                       "\nCódigo Municipio: " + found.CodigoMun +
+                       "\nNombre Departamento: " + found.NombreDept +
+                       "\nNombre Municipio: " + found.NombreMun +
+                       "\nTipo: " + found.Tipo;
+            } else
+            {
+                munInfo.Text = "Código de Municipio no encontrado";
+            }
+        }
+
+
     }
 }
